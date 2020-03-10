@@ -67,6 +67,11 @@ print(f3(8))     # Should print 9
 # Note: Google "python keyword arguments".
 
 # YOUR CODE HERE
+def f4(**kargs):
+    for key, value in kargs.items():
+        x=key
+        y=value
+        print(f"key: {x}, value: {y}")
 
 # Should print
 # key: a, value: 12
@@ -85,4 +90,17 @@ d = {
 }
 
 # How do you have to modify the f4 call below to make this work?
-f4(d)
+
+#UNPACKING!!!!!
+
+f4(**d)
+
+# for key, value in d.items():
+#     a=f"{key}='{value}'"
+#     f4(eval(a))
+
+# keys = [key for key in d.keys()]
+# values = [value for value in d.values()]
+# for key in keys:
+#     for value in values:
+#         f4(f'{key}'==value)
